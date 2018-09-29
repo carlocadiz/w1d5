@@ -1,6 +1,10 @@
-function popBottles(agrv){
-  return (2 * agrv - 5);
+var argv = process.argv.slice(2);
+
+function popBottles(investment){
+  var output = {};
+
+  return (2 * investment - 5);
 }
 
 
-console.log("$50 investement will get me",popBottles(50),"bottles");
+console.log("$50 investement will get me",popBottles(argv),"bottles");
