@@ -2,14 +2,17 @@ var argv = process.argv.slice(2);
 
 function popBottles(investment){
   var totalBottles = 2 * investment - 5;
-  var output = {'Total Bottles' : totalBottles,
+  var output = {'TOTAL BOTTLES' : totalBottles,
+                'REMAINING BOTTLES' : totalBottles % 2,
+                'REMAINING CAPS' : totalBottles % 4,
 
-                'Total Earned' : { 'Bottles' : parseInt(totalBottles/2,10),
-                                 'Caps' : parseInt (totalBottles/4,10)}
+                'TOTAL EARNED' : { 'BOTTLES' : parseInt(totalBottles/2,10),
+                                   'CAPS' : parseInt (totalBottles/4,10)}
                                };
 
   return output
 }
 
 
-console.log("$50 investement will get me",popBottles(argv),"bottles");
+
+console.log(popBottles(argv));
